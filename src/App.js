@@ -1,26 +1,54 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import styled, { ThemeProvider } from 'styled-components'
+// import _ from 'lodash'
+
+import NavBar from './components/NavBar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+// import './App.css';
+import theme from './styles/theme'
+import GlobalStyle from './styles/global'
+
+
 
 class App extends Component {
+  state = {
+    appName: 'light',
+    navBarFixed: false,
+  }
+  componentDidMount() {
+    this.scrollListener = window.addEventListener('scroll', (e) => {
+      console.log(e)
+      if (e.pageY > 120) {
+        this.setState({navBarFixed: true})
+      } else {
+        this.setState({navBarFixed: false})
+        
+      }
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(this.scrollListener)
+  }
   render() {
+    const appTheme = theme[this.state.appName]
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ThemeProvider theme={appTheme}>
+        <Fragment>
+          <GlobalStyle />
+          <NavBar fixed={this.state.navBarFixed} />
+          <Hero id="hero"/> 
+          <About id="about"/>
+          <Portfolio id="section1" />
+          <Contact id="contact" />
+          <Footer id="footer" />
+        </Fragment>
+          
+      </ThemeProvider>
     );
   }
 }

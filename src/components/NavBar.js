@@ -2,6 +2,10 @@ import React from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import styled, {keyframes} from 'styled-components'
 
+import NavList from '../styles/NavList'
+import NavItem from '../styles/NavItem'
+import Row from '../styles/Row'
+
 const elementAppear = keyframes`
   from {
     opacity: 0;
@@ -12,76 +16,72 @@ const elementAppear = keyframes`
   }
 `
 
-const Container = styled.header`
-  /* position: sticky; */
+const Container = styled.nav`
   width: 100%;
-  background: #fff;
-  /* transition: all .2s; */
-  position: relative;
-  /* left: 0;
-  top: 0; */
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0px 10px 0 0 blue;
-    opacity: 0;
-    /* transition: all 2s; */
-
-  }
+  /* background: transparent; */
 
   &.fixed {
     position: fixed;
     top: 0;
     left: 0;
+    /* width: 100%; */
     background: seagreen;
-    animation: ${elementAppear} .5s backwards;
-  }
-  &.fixed::after {
-    /* opacity: 1; */
-    animation: ${elementAppear} .5s forwards;
-
+    animation: ${elementAppear} .3s backwards;
   }
 `
+
 
 const NavBar = ({fixed}) => {
   return (
     <Container className={fixed ? 'fixed' : ''}>
-      Nav
-      <Link 
-        to="hero"
-        smooth={true}
-        duration={2000}
-      >
-        Home
-      </Link>
+      <Row>
+        <NavList>
+          <NavItem>
+            <Link 
+              to="hero"
+              smooth={true}
+              duration={300}
+              spy={true}
+            >
+              Home
+            </Link>
+          </NavItem>
 
-      <Link 
-        to="about"
-        smooth={true}
-        duration={2000}
-      >
-        About
-      </Link>
+          <NavItem>
+            <Link 
+              to="about"
+              smooth={true}
+              duration={250}
+              spy={true}
+            >
+              About
+            </Link>
+          </NavItem>
 
-      <Link 
-        to="section1"
-        smooth={true}
-        duration={2000}
-      >
-        Portfolio
-      </Link>
-      
-      <Link 
-        to="contact"
-        smooth={true}
-        duration={2000}
-      >
-        Contact
-      </Link>
+          <NavItem>
+            <Link 
+              to="portfolio"
+              smooth={true}
+              duration={250}
+              spy={true}
+            >
+              Portfolio
+            </Link>
+          </NavItem>
+
+          <NavItem>
+            <Link 
+              to="contact"
+              smooth={true}
+              duration={300}
+              spy={true}
+            >
+              Contact
+            </Link>
+          </NavItem>
+
+        </NavList>
+      </Row>
     </Container>
   )
 }

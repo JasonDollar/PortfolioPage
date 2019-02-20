@@ -12,15 +12,11 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 2;
-  font-family: 'radnika_next';
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
   background: ${props => props.theme.background};
 }
-a {
-  text-decoration: none;
-  color: #111;
-}
+
 `
 
 

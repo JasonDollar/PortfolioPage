@@ -40,10 +40,9 @@ class App extends Component {
       <ThemeProvider theme={appTheme}>
         <Fragment>
           <GlobalStyle />
-          <NavBar fixed={this.state.navBarFixed} />
-          <Hero id="hero"/> 
+          <Hero id="hero" fixed={this.state.navBarFixed}/> 
           <About id="about"/>
-          <Portfolio id="section1" />
+          <Portfolio id="portfolio" />
           <Contact id="contact" />
           <Footer id="footer" />
         </Fragment>

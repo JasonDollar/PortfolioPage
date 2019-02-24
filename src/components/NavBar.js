@@ -29,6 +29,7 @@ const Container = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 500;
     /* width: 100%; */
     background: ${props => props.theme.background};
@@ -48,7 +49,7 @@ const NavBar = ({fixed}) => {
               to="hero"
               smooth={true}
               duration={300}
-              spy={true}
+              // spy={true}
             >
               Home
             </Link>
@@ -59,7 +60,7 @@ const NavBar = ({fixed}) => {
               to="about"
               smooth={true}
               duration={250}
-              spy={true}
+              
             >
               About
             </Link>
@@ -70,7 +71,7 @@ const NavBar = ({fixed}) => {
               to="portfolio"
               smooth={true}
               duration={250}
-              spy={true}
+              
             >
               Portfolio
             </Link>

@@ -7,7 +7,7 @@ import AppGrid from '../styles/AppGrid'
 const PortfolioContainer = styled(AppGrid)`
   width: 100%;
   height: 100vh;
-  background-color: goldenrod;
+  background-color: mediumaquamarine;
   grid-column: 1 / span 3;
 `
 

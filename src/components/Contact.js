@@ -72,6 +72,7 @@ font-size: 2.4rem;
 padding: 0;
   li {
     margin: 2rem 0;
+    /* margin-left: 0; */
   }
 
 
@@ -81,6 +82,7 @@ const Link = styled.a`
   text-decoration: none;
   color: inherit;
   padding: 1rem;
+  padding-left: 0;
   & span {
     
     margin-left: 1rem;
@@ -117,17 +119,17 @@ const Contact = ({id}) => {
           <HeadingSmall>Social Media</HeadingSmall>
           <ContactList>
             <li>
-                <Link href="https://www.facebook.com/HikariYamii">
-                  <FontAwesomeIcon icon={['fab', "facebook-square"]} aria-hidden="true"/>
-                  <span>Facebook</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="mailto:elrey33@gmail.com">
-                <FontAwesomeIcon icon={['fab', "github"]} aria-hidden="true"/>
-                <span>Github</span>
-                </Link>
-              </li>
+              <Link href="https://www.facebook.com/HikariYamii" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={['fab', "facebook-square"]} aria-hidden="true"/>
+                <span>Facebook</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/JasonDollar"  target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={['fab', "github"]} aria-hidden="true"/>
+              <span>Github</span>
+              </Link>
+            </li>
           </ContactList>
         </SocialMedia>
        

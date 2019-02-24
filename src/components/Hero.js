@@ -50,6 +50,7 @@ const TextPart = styled.div`
   & h1, & h3 {
     margin-left: 2rem;
     line-height: 1.4;
+    padding-bottom: 1.5rem;
   }
   @media screen and (min-width: 767px) and (orientation: landscape) {
     
@@ -58,6 +59,7 @@ const TextPart = styled.div`
     & h1, & h3 {
     margin-left: 0;
     line-height: 2;
+    padding-bottom: 0;
   }
   }
 `

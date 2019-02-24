@@ -27,7 +27,8 @@ const Container = styled.nav`
     left: 0;
     z-index: 500;
     /* width: 100%; */
-    background: seagreen;
+    background: ${props => props.theme.background};
+    box-shadow: 0px 0px 15px -5px black;
     animation: ${elementAppear} .3s backwards;
   }
 `

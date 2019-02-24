@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import Heading from '../styles/Heading'
 import AppGrid from '../styles/AppGrid'
+import HeadingSmall from '../styles/HeadingSmall'
 
 const ContactContainer = styled(AppGrid)`
   width: 100%;
@@ -37,18 +38,17 @@ const ContactHeading = styled(Heading)`
   grid-row: 1 / 2;
 `
 
-const SmallHeading = styled.h3`
-  color: inherit;
-  font-size: 3rem;
-`
+
 
 const ContactData = styled.div`
   grid-row: 2 / 3;
   grid-column: 1 / span 1;
   justify-self: center;
+  text-align: center;
   @media screen and (min-width: 576px) {
     grid-row: 2 / 3;
     justify-self: end;
+    text-align: left;
     /* grid-column: 1 /2; */
   }
 `
@@ -57,10 +57,12 @@ const SocialMedia = styled.div`
   grid-row: 3 / 4;
   grid-column: 1 / 2;
   justify-self: center;
+  text-align: center;
   @media screen and (min-width: 576px) {
     grid-row: 2 / 3;
     grid-column: 2 /3;
     justify-self: start;
+    text-align: left;
   }
 `
 
@@ -94,7 +96,7 @@ const Contact = ({id}) => {
           Contact Me
         </ContactHeading>
         <ContactData>
-          <SmallHeading>Contact</SmallHeading>
+          <HeadingSmall>Contact</HeadingSmall>
           <ContactList>
             <li>
               <Link href="tel:+48517716865" aria-label="Telephone" >
@@ -111,18 +113,18 @@ const Contact = ({id}) => {
           </ContactList>
         </ContactData>
         <SocialMedia>
-          <SmallHeading>Social Media</SmallHeading>
+          <HeadingSmall>Social Media</HeadingSmall>
           <ContactList>
             <li>
                 <Link href="tel:+48517716865" aria-label="Telephone" >
                   <FontAwesomeIcon icon="mobile-alt" aria-hidden="true"/>
-                  <span>517-716-865</span>
+                  <span>Facebook</span>
                 </Link>
               </li>
               <li>
                 <Link href="mailto:elrey33@gmail.com" aria-label="Email" >
                 <FontAwesomeIcon icon="envelope" aria-hidden="true"/>
-                <span>elrey33@gmail.com</span>
+                <span>Instagram</span>
                 </Link>
               </li>
           </ContactList>

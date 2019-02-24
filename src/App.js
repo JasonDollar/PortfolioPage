@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {faMobileAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 
-import NavBar from './components/NavBar'
+// import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 // import './App.css';
 import theme from './styles/theme'
 import GlobalStyle from './styles/global'
-import AppGrid from './styles/AppGrid'
+// import AppGrid from './styles/AppGrid'
 
 library.add(faMobileAlt, faEnvelope)
 

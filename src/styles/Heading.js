@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Heading = styled.h2`
-  font-size: 4.8rem;
+  font-size: ${props => props.primary ? '6rem' : '4.8rem'};
   margin: 0;
   position: relative;
   line-height: 2;

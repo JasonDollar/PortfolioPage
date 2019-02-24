@@ -2,8 +2,8 @@ const theme = {
   light: {
     textColor: '#111',
     textSec: '#333',
-    textWhite: '#fafafa',
-    background: '#fff',
+    textWhite: '#fff',
+    background: '#fbfbfb',
     color1: '#e45447',
   }
 }

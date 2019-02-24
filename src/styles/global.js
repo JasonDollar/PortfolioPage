@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
-  font-family: 'Montserrat', sans-serif;
+ font-family: 'Roboto', 'Montserrat', sans-serif;
   background: ${props => props.theme.background};
 }
 

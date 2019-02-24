@@ -10,6 +10,8 @@ const NavItem = styled.li`
     border-bottom: 2px solid #acacac00;
     transition: all .2s;
     color: ${props => props.theme.textColor};
+    /* font-weight: bold; */
+    letter-spacing: 2px;
     &:hover {
       /* color: yellow; */
       cursor: pointer;

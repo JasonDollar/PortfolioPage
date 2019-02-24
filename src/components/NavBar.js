@@ -18,12 +18,14 @@ const elementAppear = keyframes`
 
 const Container = styled.nav`
   width: 100%;
+  grid-column: 2 / 3;
   /* background: transparent; */
 
   &.fixed {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 500;
     /* width: 100%; */
     background: seagreen;
     animation: ${elementAppear} .3s backwards;

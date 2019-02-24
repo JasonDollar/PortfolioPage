@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
-// import _ from 'lodash'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {faMobileAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+
 
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
@@ -11,8 +13,9 @@ import Footer from './components/Footer'
 // import './App.css';
 import theme from './styles/theme'
 import GlobalStyle from './styles/global'
+import AppGrid from './styles/AppGrid'
 
-
+library.add(faMobileAlt, faEnvelope)
 
 class App extends Component {
   state = {

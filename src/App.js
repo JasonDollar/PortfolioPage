@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faMobileAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 
 // import NavBar from './components/NavBar'
@@ -15,7 +16,7 @@ import theme from './styles/theme'
 import GlobalStyle from './styles/global'
 // import AppGrid from './styles/AppGrid'
 
-library.add(faMobileAlt, faEnvelope)
+library.add(faMobileAlt, faEnvelope, fab)
 
 class App extends Component {
   state = {
@@ -24,8 +25,9 @@ class App extends Component {
   }
   componentDidMount() {
     this.scrollListener = window.addEventListener('scroll', (e) => {
-      console.log(e)
-      if (e.pageY > 120) {
+      // console.log(e)
+      // console.log(window.pageYOffset)
+      if (e.pageY > 120 || window.pageYOffset > 120) {
         this.setState({navBarFixed: true})
       } else {
         this.setState({navBarFixed: false})

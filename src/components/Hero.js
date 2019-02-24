@@ -9,7 +9,9 @@ import HeadingSmall from '../styles/HeadingSmall'
 const HeroContainer = styled(AppGrid)`
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #ff5f6d, #ffc371);
+  /* background: linear-gradient(to bottom right, #ff5f6d, #ffc371); */
+  background: linear-gradient(to bottom right, #fff, #ccc);
+  /* background: linear-gradient(to bottom right, #fc848e, #ffd9a3); */
   grid-template-rows: auto 1fr;
 `
 
@@ -20,9 +22,14 @@ const HeroSection = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr repeat(4, 3fr) 1fr;
-  gap: 4rem;
+  grid-template-rows: 1fr 3fr;
+  justify-content: center;
+  @media screen and (min-width: 767px) and (orientation: landscape) {
+    
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr repeat(4, 3fr) 1fr;
+    gap: 4rem;
+  }
   font-family: 'Roboto', sans-serif;
 `
 
@@ -30,20 +37,38 @@ const ImagePart = styled.div`
 /* flex: 0 1 50%; */
   /* grid-column: 2 / span 3; */
   font-size: 30px;
-  grid-column: 1 / 2;
-  grid-row: 2/ span 4;
+  @media screen and (min-width: 767px) and (orientation: landscape) {
+    grid-column: 1 / 2;
+    grid-row: 2/ span 4;
+
+  }
 `
 
 const TextPart = styled.div`
 /* flex: 1 1 50%; */
-font-size: 30px;
-grid-column: 2 / 3;
-  grid-row: 3/ -1;
+  font-size: 30px;
+  & h1, & h3 {
+    margin-left: 2rem;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 767px) and (orientation: landscape) {
+    
+    grid-column: 2 / 3;
+    grid-row: 3/ -1;
+    & h1, & h3 {
+    margin-left: 0;
+    line-height: 2;
+  }
+  }
 `
 
-const HeadingBig = props => <h1 {...props} children={props.children} />
+const HeadingBig = props => <h1 {...props} isPrimary={true} children={props.children} />
 
-// const HeadingSmall = styled.h3
+const HeroHeadingSmall = styled(HeadingSmall)`
+  span {
+    color: ${props => props.theme.color1}
+  }
+`
 
 const Hero = ({id, fixed}) => {
   return (
@@ -51,16 +76,15 @@ const Hero = ({id, fixed}) => {
     <NavBar fixed={fixed}/>
       <HeroSection>
         <ImagePart>
-          Tu bd zdjecie
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          {' '}
         </ImagePart>
         <TextPart>
-          <Heading as={HeadingBig} primary>
+          <Heading as={HeadingBig} isPrimary={true}>
             Radosław Kaźmierczak
           </Heading>
-          <HeadingSmall>
-            Junior JavaScript Developer
-          </HeadingSmall>
+          <HeroHeadingSmall>
+            Junior <span>JavaScript</span>  Developer
+          </HeroHeadingSmall>
         </TextPart>
       </HeroSection>
     </HeroContainer>

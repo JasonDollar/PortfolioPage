@@ -22,7 +22,7 @@ const About = (props) => {
   return (
     <AboutContainer id="about">
       <AboutSection>
-        <Heading>Section</Heading>
+        <Heading>About Me</Heading>
       </AboutSection>
     </AboutContainer>
   )

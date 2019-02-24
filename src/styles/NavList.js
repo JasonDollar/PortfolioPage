@@ -3,10 +3,14 @@ import styled from 'styled-components'
 const NavList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   margin: 0;
+  justify-content: center;
   /* line-height: 2; */
-  padding: 2rem;
+  padding: 2rem 0;
+  @media screen and (min-width: 576px) {
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
 `
 
 export default NavList

@@ -4,7 +4,8 @@ const theme = {
     textSec: '#333',
     textWhite: '#fff',
     background: '#fbfbfb',
-    color1: '#e45447',
+    color1: '#f04b3c',
+    color2: '#30336b',
   }
 }
 

@@ -19,7 +19,11 @@ const elementAppear = keyframes`
 const Container = styled.nav`
   width: 100%;
   grid-column: 2 / 3;
+  font-size: 2rem;
   /* background: transparent; */
+  @media screen and (min-width: 576px) {
+    font-size: 2.2rem;
+  }
 
   &.fixed {
     position: fixed;

@@ -68,10 +68,10 @@ const SocialMedia = styled.div`
 
 const ContactList = styled.ul`
 list-style: none;
-font-size: 2rem;
+font-size: 2.4rem;
 padding: 0;
   li {
-    padding: 1rem 0;
+    margin: 2rem 0;
   }
 
 
@@ -80,8 +80,9 @@ padding: 0;
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
-
+  padding: 1rem;
   & span {
+    
     margin-left: 1rem;
   } 
 `
@@ -92,7 +93,7 @@ const Contact = ({id}) => {
   return (
     <ContactContainer id={id}>
       <ContactSection>
-        <ContactHeading>
+        <ContactHeading noColor>
           Contact Me
         </ContactHeading>
         <ContactData>
@@ -116,15 +117,15 @@ const Contact = ({id}) => {
           <HeadingSmall>Social Media</HeadingSmall>
           <ContactList>
             <li>
-                <Link href="tel:+48517716865" aria-label="Telephone" >
-                  <FontAwesomeIcon icon="mobile-alt" aria-hidden="true"/>
+                <Link href="https://www.facebook.com/HikariYamii">
+                  <FontAwesomeIcon icon={['fab', "facebook-square"]} aria-hidden="true"/>
                   <span>Facebook</span>
                 </Link>
               </li>
               <li>
-                <Link href="mailto:elrey33@gmail.com" aria-label="Email" >
-                <FontAwesomeIcon icon="envelope" aria-hidden="true"/>
-                <span>Instagram</span>
+                <Link href="mailto:elrey33@gmail.com">
+                <FontAwesomeIcon icon={['fab', "github"]} aria-hidden="true"/>
+                <span>Github</span>
                 </Link>
               </li>
           </ContactList>

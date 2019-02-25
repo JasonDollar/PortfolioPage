@@ -11,6 +11,7 @@ const FooterContainer = styled.footer`
   grid-column: 1 / span 3;
   text-align: center;
   span {
+    font-size: 1.8rem;
     display: block;
     padding: 3rem;
   }

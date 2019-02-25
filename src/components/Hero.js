@@ -12,7 +12,7 @@ const HeroContainer = styled(AppGrid)`
   /* background: linear-gradient(to bottom right, #ff5f6d, #ffc371); */
   background: linear-gradient(to bottom right, #fff, #ccc);
   /* background: linear-gradient(to bottom right, #fc848e, #ffd9a3); */
-  grid-template-rows: auto 1fr;
+  grid-template-rows: minmax(6.7rem, max-content) 1fr;
 `
 
 const HeroSection = styled.div`

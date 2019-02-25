@@ -30,7 +30,7 @@ const Heading = styled.h2`
     bottom: 0px;
     left: 0;
     height: 2px;
-    width: 100px;
+    width: 10rem;
     background: ${props => props.noColor ? 'currentColor' : props.theme.color1 };
     z-index: 100;
   }

@@ -1,17 +1,15 @@
 import React, { Component, Fragment } from 'react';
-import styled, { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faMobileAlt, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 
-// import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-// import './App.css';
 import theme from './styles/theme'
 import GlobalStyle from './styles/global'
 // import AppGrid from './styles/AppGrid'

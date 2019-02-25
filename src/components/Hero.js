@@ -24,7 +24,7 @@ const HeroSection = styled.div`
   display: grid;
   grid-template-rows: 1fr 3fr;
   justify-content: center;
-  @media screen and (min-width: 767px) and (orientation: landscape) {
+  @media screen and (min-width: 982px) and (orientation: landscape) {
     
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr repeat(4, 3fr) 1fr;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 import styled, {keyframes} from 'styled-components'
 
 import NavList from '../styles/NavList'
@@ -45,6 +45,35 @@ const NavBar = ({fixed}) => {
       <Row>
         <NavList>
           <NavItem>
+            
+            <a href="#home" className="link">Home</a>
+          </NavItem>
+
+          <NavItem>
+            <a href="#about" className="link">About</a>
+          </NavItem>
+
+          <NavItem>
+            <a href="#portfolio" className="link">Portfolio</a>
+          </NavItem>
+
+          <NavItem>
+            <a href="#contact" className="link">Contact</a>
+          </NavItem>
+
+        </NavList>
+      </Row>
+    </Container>
+  )
+}
+
+export default NavBar
+
+/*
+    <Container className={fixed ? 'fixed' : ''}>
+      <Row>
+        <NavList>
+          <NavItem>
             <Link 
               to="hero"
               smooth={true}
@@ -53,6 +82,7 @@ const NavBar = ({fixed}) => {
             >
               Home
             </Link>
+            <a href="#hero">Hero</a>
           </NavItem>
 
           <NavItem>
@@ -92,6 +122,5 @@ const NavBar = ({fixed}) => {
       </Row>
     </Container>
   )
-}
 
-export default NavBar
+*/

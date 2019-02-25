@@ -11,6 +11,7 @@ const NavList = styled.ul`
     justify-content: flex-end;
     margin-right: 3rem;
   }
+  
 `
 
 export default NavList

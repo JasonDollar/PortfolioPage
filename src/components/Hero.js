@@ -24,22 +24,22 @@ const HeroSection = styled.div`
   display: grid;
   grid-template-rows: 1fr 3fr;
   justify-content: center;
-  @media screen and (min-width: 982px) and (orientation: landscape) {
+  font-family: 'Roboto', sans-serif;
+  @media screen and (min-width: 990px)  {
     
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr repeat(4, 3fr) 1fr;
     gap: 4rem;
   }
-  font-family: 'Roboto', sans-serif;
 `
 
 const ImagePart = styled.div`
 /* flex: 0 1 50%; */
   /* grid-column: 2 / span 3; */
   font-size: 30px;
-  @media screen and (min-width: 767px) and (orientation: landscape) {
+  @media screen and (min-width: 990px) {
     grid-column: 1 / 2;
-    grid-row: 2/ span 4;
+    grid-row: 1 / 2;
 
   }
 `
@@ -52,8 +52,7 @@ const TextPart = styled.div`
     line-height: 1.4;
     padding-bottom: 1.5rem;
   }
-  @media screen and (min-width: 767px) and (orientation: landscape) {
-    
+  @media screen and (min-width: 990px) {
     grid-column: 2 / 3;
     grid-row: 3/ -1;
     & h1, & h3 {
@@ -63,8 +62,6 @@ const TextPart = styled.div`
   }
   }
 `
-
-const HeadingBig = props => <h1 {...props} isPrimary={true} children={props.children} />
 
 const HeroHeadingSmall = styled(HeadingSmall)`
   span {
@@ -81,7 +78,7 @@ const Hero = ({id, fixed}) => {
           {' '}
         </ImagePart>
         <TextPart>
-          <Heading as={HeadingBig} isPrimary={true}>
+          <Heading as='h1' isPrimary={true}>
             Radosław Kaźmierczak
           </Heading>
           <HeroHeadingSmall>

@@ -15,12 +15,21 @@ const elementAppear = keyframes`
     opacity: 1;
   }
 `
+const elementDisappear = keyframes`
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+`
 
 const Container = styled.nav`
   width: 100%;
   grid-column: 2 / 3;
   font-size: 2rem;
-  /* background: transparent; */
+  /* animation: ${elementDisappear} .3s backwards; */
   @media screen and (min-width: 576px) {
     font-size: 2.2rem;
   }
@@ -40,13 +49,20 @@ const Container = styled.nav`
 
 
 const NavBar = ({fixed}) => {
+  const onNavLinkClick = e => {
+    e.preventDefault();
+    console.log(e)
+    document.querySelector('#home').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  }
   return (
     <Container className={fixed ? 'fixed' : ''}>
       <Row>
         <NavList>
           <NavItem>
             
-            <a href="#home" className="link">Home</a>
+            <a href="#home" className="link" onClick={onNavLinkClick}>Home</a>
           </NavItem>
 
           <NavItem>

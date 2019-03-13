@@ -23,7 +23,7 @@ const ContactSection = styled.section`
   display: grid;
   grid-template-rows: auto 1fr 1fr;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  row-gap: 2rem;
   column-gap: 4rem;
   justify-content: center;
   justify-items: center;
@@ -36,6 +36,7 @@ const ContactSection = styled.section`
 const ContactHeading = styled(Heading)`
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+  /* padding: 1rem; */
 `
 
 
@@ -72,6 +73,9 @@ font-size: 2.4rem;
 padding: 0;
   li {
     margin: 2rem 0;
+    /* &:not(&:last-child) {
+      margin-bottom: 1rem;
+    } */
     /* margin-left: 0; */
   }
 
@@ -79,10 +83,28 @@ padding: 0;
 `
 
 const Link = styled.a`
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: currentColor;
+    transition: all .2s;
+  }
+  &:link,
+  &:visited {
   text-decoration: none;
   color: inherit;
-  padding: 1rem;
-  padding-left: 0;
+  padding: 1rem 0;
+  position: relative;
+  
+  /* padding-left: 0; */
+  }
+  &:hover::after {
+    width: 100%;
+  }
   & span {
     
     margin-left: 1rem;
@@ -102,15 +124,15 @@ const Contact = ({id}) => {
           <HeadingSmall>Contact</HeadingSmall>
           <ContactList>
             <li>
-              <Link href="tel:+48517716865" aria-label="Telephone" >
+              <Link href="tel:+48699532123" aria-label="Telephone" >
                 <FontAwesomeIcon icon="mobile-alt" aria-hidden="true"/>
-                <span>517-716-865</span>
+                <span>+48 699-532-123</span>
               </Link>
             </li>
             <li>
-              <Link href="mailto:elrey33@gmail.com" aria-label="Email" >
+              <Link href="mailto:radekkazmierczak@icloud.com" aria-label="Email" >
                 <FontAwesomeIcon icon="envelope" aria-hidden="true"/>
-                <span>elrey33@gmail.com</span>
+                <span>radekkazmierczak@icloud.com</span>
               </Link>
             </li>
           </ContactList>
@@ -119,9 +141,9 @@ const Contact = ({id}) => {
           <HeadingSmall>Social Media</HeadingSmall>
           <ContactList>
             <li>
-              <Link href="https://www.facebook.com/HikariYamii" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={['fab', "facebook-square"]} aria-hidden="true"/>
-                <span>Facebook</span>
+              <Link href="https://www.linkedin.com/in/rados%C5%82aw-ka%C5%BAmierczak-a90057182" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={['fab', "linkedin"]} aria-hidden="true"/>
+                <span>LinkedIn</span>
               </Link>
             </li>
             <li>

@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 const NavItem = styled.li`
   
-  margin: 0 1rem;
+  margin: 0;
+  @media (min-width: 360px) {
+    margin: 0 1rem;
+  }
 
   & .link {
     &:link,

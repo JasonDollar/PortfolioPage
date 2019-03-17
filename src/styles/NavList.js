@@ -4,7 +4,9 @@ const NavList = styled.ul`
   list-style: none;
   display: flex;
   margin: 0;
-  justify-content: center;
+  width: 100%;
+  
+  justify-content: space-around;
   /* line-height: 2; */
   padding: 2rem 0;
   @media screen and (min-width: 576px) {

@@ -7,6 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Hero from './components/Hero'
 import About from './components/About'
+import Tech from './components/Tech'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -45,6 +46,7 @@ class App extends Component {
           <GlobalStyle />
           <Hero id="home" fixed={this.state.navBarFixed}/> 
           <About id="about"/>
+          <Tech />
           <Portfolio id="portfolio" />
           <Contact id="contact" />
           <Footer id="footer" />

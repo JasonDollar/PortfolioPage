@@ -9,6 +9,7 @@ import reactLogo from '../img/react-small.png'
 import reduxLogo from '../img/redux-small.png'
 import jestLogo from '../img/jest-small.png'
 import firebaseLogo from '../img/firebase-small.png'
+import gitLogo from '../img/git-small.png'
 
 import Heading from '../styles/Heading'
 import AppGrid from '../styles/AppGrid'
@@ -121,6 +122,12 @@ const Tech = (props) => {
             <figure>
             <img src={firebaseLogo} alt="Firebase logo" className="tech__icon"/>
               <figcaption>Firebase</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src={gitLogo} alt="Git logo" className="tech__icon"/>
+              <figcaption>Git</figcaption>
             </figure>
           </li>
         </TechList>

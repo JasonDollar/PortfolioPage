@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import NavBar from './NavBar'
-import Heading from '../styles/Heading'
 import AppGrid from '../styles/AppGrid'
+import HeadingBig from '../styles/HeadingBig'
 import HeadingSmall from '../styles/HeadingSmall'
 
 const HeroContainer = styled(AppGrid)`
@@ -22,12 +22,13 @@ const HeroSection = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  /* grid-template-rows: 1fr 3fr; */
   justify-content: center;
+  align-content: center;
   font-family: 'Roboto', sans-serif;
   @media screen and (min-width: 990px)  {
     
-    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 2fr; */
     grid-template-rows: 1fr repeat(4, 3fr) 1fr;
     gap: 4rem;
   }
@@ -47,6 +48,9 @@ const ImagePart = styled.div`
 const TextPart = styled.div`
 /* flex: 1 1 50%; */
   font-size: 30px;
+  & span {
+    color: ${props => props.theme.color1}
+  }
   & h1, & h3 {
     margin-left: 2rem;
     line-height: 1.4;
@@ -57,16 +61,14 @@ const TextPart = styled.div`
     grid-row: 3/ -1;
     & h1, & h3 {
     margin-left: 0;
-    line-height: 2;
+    /* line-height: 2; */
     padding-bottom: 0;
   }
   }
 `
 
 const HeroHeadingSmall = styled(HeadingSmall)`
-  span {
-    color: ${props => props.theme.color1}
-  }
+
 `
 
 const Hero = ({id, fixed}) => {
@@ -78,11 +80,11 @@ const Hero = ({id, fixed}) => {
           {' '}
         </ImagePart>
         <TextPart>
-          <Heading as='h1' isPrimary={true}>
-            Radosław Kaźmierczak
-          </Heading>
+          <HeadingBig>
+            Hello, my name is <span>Radek</span>.
+          </HeadingBig>
           <HeroHeadingSmall>
-            Junior <span>JavaScript</span>  Developer
+            I am a Junior <span>Front End</span> Developer.
           </HeroHeadingSmall>
         </TextPart>
       </HeroSection>

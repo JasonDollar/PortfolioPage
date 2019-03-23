@@ -45,6 +45,12 @@ const Container = styled.nav`
     box-shadow: 0px 0px 15px -5px black;
     animation: ${elementAppear} .3s backwards;
   }
+  .desktop-only {
+    display: none;
+    @media (min-width: 576px) {
+      display: block;
+    }
+  }
 `
 
 
@@ -60,13 +66,16 @@ const NavBar = ({fixed}) => {
     <Container className={fixed ? 'fixed' : ''}>
       <Row>
         <NavList>
-          <NavItem>
-            
+          <NavItem className="desktop-only">
             <a href="#home" className="link" onClick={onNavLinkClick}>Home</a>
           </NavItem>
 
           <NavItem>
             <a href="#about" className="link">About</a>
+          </NavItem>
+
+          <NavItem>
+            <a href="#tech" className="link">Skills</a>
           </NavItem>
 
           <NavItem>

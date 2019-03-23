@@ -26,7 +26,7 @@ class App extends Component {
     this.scrollListener = window.addEventListener('scroll', (e) => {
       // console.log(e)
       // console.log(window.pageYOffset)
-      if (e.pageY > 120 || window.pageYOffset > 120) {
+      if (e.pageY > 100 || window.pageYOffset > 100) {
         this.setState({navBarFixed: true})
       } else {
         this.setState({navBarFixed: false})

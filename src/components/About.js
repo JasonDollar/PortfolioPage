@@ -8,8 +8,9 @@ import TextParagraph from '../styles/TextParagraph'
 
 const AboutContainer = styled(AppGrid)`
   width: 100%;
-  height: 100vh;
-  background-color: #7678ed;
+  /* height: 100vh; */
+  background-color: #8c8eff;
+  padding: 6rem 0;
   /* grid-column: 1 / span 3; */
 `
 
@@ -26,7 +27,9 @@ const About = (props) => {
     <AboutContainer id="about">
       <AboutSection>
         <Heading>About Me</Heading>
-        <TextParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius unde soluta nostrum quo fugit fuga eos quae vitae, at corporis pariatur debitis fugiat molestiae blanditiis porro, hic ratione nam!</TextParagraph>
+        <TextParagraph>
+          In 2018 I have decided to become a Front End Developer.
+        </TextParagraph>
       
       </AboutSection>
     </AboutContainer>

@@ -76,8 +76,13 @@ const Project = ({project}) => {
 
   return (
     <ProjectContainer>
-      
-      <img className="projectImage" src={`/images/${project.img}`} alt={project.alt}/>
+      <picture>
+        <source type="image/webp"
+              srcset={`/images/${project.img}.webp`}  
+              />
+        <source srcset={`/images/${project.img}.png`}/>
+        <img className="projectImage" src={`/images/${project.img}.png`} alt={project.alt}/>
+      </picture>
       
       <ProjectDetail>
         <h3 className="title">{project.title}</h3>

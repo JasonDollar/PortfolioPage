@@ -124,9 +124,9 @@ const Contact = ({id}) => {
           <HeadingSmall>Contact</HeadingSmall>
           <ContactList>
             <li>
-              <Link href="tel:+48699532123" aria-label="Telephone" >
+              <Link href="tel:+48699528921" aria-label="Telephone" >
                 <FontAwesomeIcon icon="mobile-alt" aria-hidden="true"/>
-                <span>+48 699-532-123</span>
+                <span>+48 699-528-921</span>
               </Link>
             </li>
             <li>

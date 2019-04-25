@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'WeatherHere',
     title: 'WeatherHere',
-    img: 'weather.webp',
+    img: 'weather',
     alt: 'Weather aplication screenshot',
     prevLink: 'https://weather-here.netlify.com/',
     github: 'https://github.com/JasonDollar/WeatherHere',
@@ -12,7 +12,7 @@ export const projects = [
   {
     id: 'NotesLite',
     title: 'NotesLite',
-    img: 'notes.webp',
+    img: 'notes',
     alt: 'Notes aplication screenshot',
     prevLink: 'https://notes-project.netlify.com/',
     github: 'https://github.com/JasonDollar/React-Notes-App',

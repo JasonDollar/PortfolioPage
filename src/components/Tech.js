@@ -88,12 +88,7 @@ const Tech = (props) => {
               <figcaption>CSS</figcaption>
             </figure>
           </li>
-          <li>
-            <figure>
-              <img src={sassLogo} alt="CSS logo" className="tech__icon"/>
-              <figcaption>SASS</figcaption>
-            </figure>
-          </li>
+
           <li>
             <figure>
               <img src={jsLogo} alt="Javascript logo" className="tech__icon"/>
@@ -137,3 +132,12 @@ const Tech = (props) => {
 }
 
 export default Tech
+
+/*
+          <li>
+            <figure>
+              <img src={sassLogo} alt="CSS logo" className="tech__icon"/>
+              <figcaption>SASS</figcaption>
+            </figure>
+          </li>
+*/

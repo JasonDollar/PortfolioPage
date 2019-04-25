@@ -75,11 +75,11 @@ const NavBar = ({fixed}) => {
           </NavItem>
 
           <NavItem>
-            <a href="#tech" className="link">Skills</a>
-          </NavItem>
-
-          <NavItem>
             <a href="#portfolio" className="link">Portfolio</a>
+          </NavItem>
+          
+          <NavItem>
+            <a href="#tech" className="link">Skills</a>
           </NavItem>
 
           <NavItem>

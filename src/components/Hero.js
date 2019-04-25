@@ -11,10 +11,11 @@ const HeroContainer = styled(AppGrid)`
   min-height: 100vh;
   /* background: linear-gradient(to bottom right, #ff5f6d, #ffc371); */
   background: linear-gradient(to bottom right, #fff, #ccc);
+  background: linear-gradient(to bottom right, #fff, #ccc);
   /* background: linear-gradient(to bottom right, #fc848e, #ffd9a3); */
   grid-template-rows: minmax(6.7rem, max-content) 1fr;
 `
-
+// 254ed1
 const HeroSection = styled.div`
 
   /* margin: 2rem 0; */
@@ -81,10 +82,10 @@ const Hero = ({id, fixed}) => {
         </ImagePart>
         <TextPart>
           <HeadingBig>
-            Hello, my name is <span>Radek</span>.
+            <span>Radosław</span> Kaźmierczak.
           </HeadingBig>
           <HeroHeadingSmall>
-            I am a Junior <span>Front End</span> Developer.
+            Junior <span>Front End</span> Developer.
           </HeroHeadingSmall>
         </TextPart>
       </HeroSection>

@@ -9,7 +9,7 @@ import TextParagraph from '../styles/TextParagraph'
 const AboutContainer = styled(AppGrid)`
   width: 100%;
   /* height: 100vh; */
-  background-color: #8c8eff;
+  background-color: mediumaquamarine;
   padding: 6rem 0;
   /* grid-column: 1 / span 3; */
 `
@@ -28,7 +28,7 @@ const About = (props) => {
       <AboutSection>
         <Heading>About Me</Heading>
         <TextParagraph>
-          In 2018 I have decided to become a Front End Developer.
+          Hello, my name is Radek. I build web aplications with React.
         </TextParagraph>
       
       </AboutSection>

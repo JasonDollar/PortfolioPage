@@ -46,8 +46,8 @@ class App extends Component {
           <GlobalStyle />
           <Hero id="home" fixed={this.state.navBarFixed}/> 
           <About id="about"/>
-          <Tech />
           <Portfolio id="portfolio" />
+          <Tech id="tech"/>
           <Contact id="contact" />
           <Footer id="footer" />
         </Fragment>

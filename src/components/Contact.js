@@ -56,13 +56,13 @@ const ContactData = styled.div`
 
 const SocialMedia = styled.div`
   grid-row: 3 / 4;
-  grid-column: 1 / 2;
+  grid-column: 1 / -1;
   justify-self: center;
   text-align: center;
   @media screen and (min-width: 576px) {
     grid-row: 2 / 3;
-    grid-column: 2 /3;
-    justify-self: start;
+    grid-column: 1 /3;
+    justify-self: center;
     text-align: left;
   }
 `
@@ -120,13 +120,13 @@ const Contact = ({id}) => {
         <ContactHeading noColor>
           Contact Me
         </ContactHeading>
-        <ContactData>
+        {/* <ContactData>
           <HeadingSmall>Contact</HeadingSmall>
           <ContactList>
             <li>
-              <Link href="tel:+48699528921" aria-label="Telephone" >
+              <Link href="tel:+48699517504" aria-label="Telephone" >
                 <FontAwesomeIcon icon="mobile-alt" aria-hidden="true"/>
-                <span>+48 699-528-921</span>
+                <span>+48 699-517-504</span>
               </Link>
             </li>
             <li>
@@ -136,7 +136,7 @@ const Contact = ({id}) => {
               </Link>
             </li>
           </ContactList>
-        </ContactData>
+        </ContactData> */}
         <SocialMedia>
           <HeadingSmall>Social Media</HeadingSmall>
           <ContactList>

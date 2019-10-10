@@ -10,6 +10,9 @@ import reduxLogo from '../img/redux-small.png'
 import jestLogo from '../img/jest-small.png'
 import firebaseLogo from '../img/firebase-small.png'
 import gitLogo from '../img/git-small.png'
+import graphLogo from '../img/graphql.png'
+import mongoLogo from '../img/mongodb-logo.png'
+import nodeLogo from '../img/node.png'
 
 import Heading from '../styles/Heading'
 import AppGrid from '../styles/AppGrid'
@@ -123,6 +126,24 @@ const Tech = (props) => {
             <figure>
             <img src={gitLogo} alt="Git logo" className="tech__icon"/>
               <figcaption>Git</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src={graphLogo} alt="GraphQL logo" className="tech__icon"/>
+              <figcaption>GraphQL</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src={mongoLogo} alt="MongoDB logo" className="tech__icon"/>
+              <figcaption>MongoDB</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+            <img src={nodeLogo} alt="Node.js logo" className="tech__icon"/>
+              <figcaption>Node.js</figcaption>
             </figure>
           </li>
         </TechList>

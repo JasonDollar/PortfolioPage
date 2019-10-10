@@ -19,4 +19,17 @@ export const projects = [
     desc: 'Aplication for taking small notes. Built with React and Redux. Also Firebase is used for notes storage and authentication.',
     tech: 'React, Redux, Firebase'
   }, 
+  {
+    id: 'PokeShop',
+    title: 'PokeShop',
+    img: 'pokeshop',
+    alt: 'Pokemon Shop app screenshot',
+    prevLink: 'https://poke-shop.netlify.com/',
+    github: 'https://github.com/JasonDollar/PokeShop-client',
+    github2: 'https://github.com/JasonDollar/PokeShop-server',
+    desc: `A place where you can sell or buy pokemons. It is a full stack app. Client side is built
+    with React. GraphQL is used for communicating with the server which is
+    built with GraphQL Yoga. MongoDB serves as a database.`,
+    tech: 'React, React Apollo, GraphQL, GraphQL Yoga, MongoDB'
+  }, 
 ]

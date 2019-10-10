@@ -78,9 +78,9 @@ const Project = ({project}) => {
     <ProjectContainer>
       <picture>
         <source type="image/webp"
-              srcset={`/images/${project.img}.webp`}  
+              srcSet={`/images/${project.img}.webp`}  
               />
-        <source srcset={`/images/${project.img}.png`}/>
+        <source srcSet={`/images/${project.img}.png`}/>
         <img className="projectImage" src={`/images/${project.img}.png`} alt={project.alt}/>
       </picture>
       
